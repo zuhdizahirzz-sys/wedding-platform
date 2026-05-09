@@ -1,26 +1,71 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-dm-sans: 'DM Sans', system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-dm-sans);
+  background: #FDFBF7;
+  color: #2C2C2A;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Utility classes */
+.font-cormorant {
+  font-family: var(--font-cormorant);
+}
+
+/* Animasi stagger untuk children */
+.stagger-children > * {
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.25s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.4s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.55s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.7s; }
+.stagger-children > *:nth-child(6) { animation-delay: 0.85s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Divider ornamen */
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #D4A853;
+  font-size: 18px;
+}
+.ornament-divider::before,
+.ornament-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #D4A85380);
+}
+.ornament-divider::after {
+  background: linear-gradient(to left, transparent, #D4A85380);
 }
