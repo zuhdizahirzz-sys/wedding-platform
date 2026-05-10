@@ -272,7 +272,7 @@ export default function LandingPage() {
             </p>
             <div className="fade-up fade-up-4" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 40 }}>
               <a href="#pakej" className="btn-gold">Mulai dari RM79</a>
-              href={`/demo?theme=${THEMES[activeTheme].id}`}
+              <a href={`/demo?theme=${THEMES[activeTheme].id}`} className="btn-outline">Lihat Demo →</a>
             </div>
             {/* Stats */}
             <div className="fade-up fade-up-5" style={{ display: 'flex', gap: 32 }}>
