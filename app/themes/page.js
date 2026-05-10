@@ -204,7 +204,7 @@ export default function ThemeSelectorPage() {
       }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 60 }}>
           <Link href="/" style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 20, fontWeight: 400, textDecoration: 'none', color: '#2C2C2A' }}>
-            Nikah<span style={{ color: '#C9A84C' }}>Digital</span>
+            Warkah<span style={{ color: '#C9A84C' }}>Cinta</span>
           </Link>
           <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
             <span style={{ fontSize: 12, color: 'rgba(44,44,42,0.5)' }}>
