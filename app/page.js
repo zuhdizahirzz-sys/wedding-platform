@@ -9,9 +9,9 @@ const THEMES = [
 ]
 
 const PAKEJ = [
-  { name: 'Starter', price: 79, popular: false, features: ['Kad jemputan digital', 'Countdown tarikh majlis', 'Butiran majlis lengkap', 'Butang WhatsApp & Maps', 'Muzik latar', 'Kisah cinta pengantin', 'Link aktif 12 bulan'], cta: 'Pilih Starter' },
-  { name: 'Classic', price: 149, popular: true, features: ['Semua dalam Starter', 'RSVP online', 'Dashboard tetamu', 'Reminder WhatsApp auto', 'Gallery gambar (10 foto)', 'Kod pakaian tetamu', 'Link aktif selamanya'], cta: 'Pilih Classic' },
-  { name: 'Premium', price: 249, popular: false, features: ['Semua dalam Classic', 'Salam kaut digital', 'Custom domain .my', '2 tema pilihan', 'Ucapan video embed', 'Gallery tanpa had', 'Priority support'], cta: 'Pilih Premium' },
+  { name: 'Starter', price: 30, popular: false, features: ['Kad jemputan digital', 'Countdown tarikh majlis', 'Butiran majlis lengkap', 'Butang WhatsApp & Maps', 'Muzik latar', 'Kisah cinta pengantin', 'Link aktif 12 bulan'], cta: 'Pilih Starter' },
+  { name: 'Classic', price: 35, popular: true, features: ['Semua dalam Starter', 'RSVP online', 'Dashboard tetamu', 'Reminder WhatsApp auto', 'Gallery gambar (10 foto)', 'Kod pakaian tetamu', 'Link aktif selamanya'], cta: 'Pilih Classic' },
+  { name: 'Premium', price: 40, popular: false, features: ['Semua dalam Classic', 'Salam kaut digital', 'Custom domain .my', '2 tema pilihan', 'Ucapan video embed', 'Gallery tanpa had', 'Priority support'], cta: 'Pilih Premium' },
 ]
 
 const FAQS = [
@@ -157,7 +157,7 @@ export default function LandingPage() {
                 Kad kahwin digital dengan RSVP, countdown, dan reminder WhatsApp automatik. Sempurna untuk pasangan moden yang ingin majlis berjalan lancar.
               </p>
               <div className="fade-up d4 hero-btns" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 40 }}>
-                <a href="#pakej" className="btn-gold">Mulai dari RM79</a>
+                <a href="#pakej" className="btn-gold">Mulai dari RM30</a>
                 <a href={`/demo?theme=${THEMES[activeTheme].id}`} className="btn-outline">Lihat Demo →</a>
               </div>
               <div className="fade-up d5 stats-row" style={{ display: 'flex', gap: 40 }}>
