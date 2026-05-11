@@ -341,7 +341,7 @@ export default function LandingPage() {
           <span className="section-tag" style={{ color: '#C9A84C' }}>Mulakan Perjalanan Anda</span>
           <h2 className="section-title" style={{ color: '#FDFBF7', marginBottom: 14 }}>Siap Untuk Mula?</h2>
           <p style={{ fontSize: 14, color: 'rgba(253,251,247,0.55)', lineHeight: 1.8, marginBottom: 32 }}>Hubungi kami sekarang dan kad digital anda akan siap dalam masa 24 jam.</p>
-          <a href="https://wa.me/60175364098?text=Salam%20WarkahCinta!%20Saya%20berminat%20nak%20order%20kad%20kahwin%20digital.%20Boleh%20terangkan%20pakej%3F" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ fontSize: 14, padding: '16px 36px' }}>
+          <a href="/order" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ fontSize: 14, padding: '16px 36px' }}>
             💬 Order via WhatsApp
           </a>
           <p style={{ fontSize: 11, color: 'rgba(253,251,247,0.25)', marginTop: 16 }}>Balas dalam masa 1 jam · Isnin–Sabtu 9am–9pm</p>
