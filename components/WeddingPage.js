@@ -422,6 +422,30 @@ export default function WeddingPage({ client }) {
             {client.maps_link && (
               <a href={client.maps_link} target="_blank" rel="noopener noreferrer" style={s.outlineBtn}>🗺️ Buka Google Maps</a>
             )}
+
+{/* Add to Calendar */}
+<div style={{ marginTop: 12, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+
+  {/* Google Calendar */}
+  <a
+    href={`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(`Majlis Perkahwinan ${client.groom_name} & ${client.bride_name}`)}&dates=${client.wedding_date.replace(/-/g,'')}/${client.wedding_date.replace(/-/g,'')}&details=${encodeURIComponent(`Majlis perkahwinan ${client.groom_name} & ${client.bride_name}`)}&location=${encodeURIComponent(client.venue_address || client.venue || '')}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ display:'flex', alignItems:'center', gap:6, flex:1, justifyContent:'center', border:`1px solid ${PRIMARY}`, color:PRIMARY, background:'transparent', padding:'11px 16px', fontSize:12, letterSpacing:'0.1em', textTransform:'uppercase', borderRadius:8, textDecoration:'none' }}
+  >
+    📅 Google Calendar
+  </a>
+  
+   {/* Apple Calendar (.ics) */}          
+  <a
+    href={`data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:${client.wedding_date.replace(/-/g,'')}T030000Z%0ADTEND:${client.wedding_date.replace(/-/g,'')}T090000Z%0ASUMMARY:${encodeURIComponent(`Majlis Perkahwinan ${client.groom_name} & ${client.bride_name}`)}%0ALOCATION:${encodeURIComponent(client.venue_address || client.venue || '')}%0ADESCRIPTION:${encodeURIComponent(`Majlis perkahwinan ${client.groom_name} & ${client.bride_name}`)}%0AEND:VEVENT%0AEND:VCALENDAR`}
+    download={`majlis-${client.groom_name.toLowerCase()}-${client.bride_name.toLowerCase()}.ics`}
+    style={{ display:'flex', alignItems:'center', gap:6, flex:1, justifyContent:'center', border:`1px solid ${PRIMARY}`, color:PRIMARY, background:'transparent', padding:'11px 16px', fontSize:12, letterSpacing:'0.1em', textTransform:'uppercase', borderRadius:8, textDecoration:'none' }}
+  >
+    🍎 Apple Calendar
+  </a>
+</div>
+            
           </div>
         )}
 
