@@ -231,7 +231,7 @@ export default function ClientDashboard({ client, rsvps }) {
             {ucapan.length === 0 ? (
               <div style={{ textAlign:'center', padding:'60px 20px', background:'#FDFBF7', borderRadius:16, border:'1px solid #E8D9BF' }}>
                 <div style={{ fontSize:40, marginBottom:12 }}>💌</div>
-                <p style={{ fontFamily:'Cormorant Garamond,Georgia,serif', fontSize:20, color:'#2C2C2A', marginBottom:6 }}>Belum ada ucapan</div>
+                <p style={{ fontFamily:'Cormorant Garamond,Georgia,serif', fontSize:20, color:'#2C2C2A', marginBottom:6 }}>Belum ada ucapan</p>
                 <p style={{ fontSize:13, color:'rgba(44,44,42,0.4)' }}>Ucapan dari tetamu akan muncul di sini</p>
               </div>
             ) : (
